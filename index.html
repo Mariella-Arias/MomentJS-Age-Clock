@@ -21,9 +21,20 @@
       Use moment() to create a new moment object from the present time
       Fix this function to display someone's exact age
       */
-      // var result = moment.preciseDiff(moment(),
+      // var result = moment.preciseDiff(moment().format(),
       //                           moment('2014-02-02 01:01:01', 'YYYY-MM-DD HH:mm:ss'));
-      document.querySelector('.countdown').innerHTML = moment()
+console.log(moment(window.birthday));
+      var result = moment.preciseDiff(moment().format(), 
+      window.birthday);
+
+      document.querySelector('.countdown').innerHTML = result;
     }
   </script>
 </body>
+
+<!-- moment().format() => 2020-07-14T10:44:58-05:00
+window.birthday => 11/24/1989 --> 
+
+<!-- //2020-07-14T10:34:25-05:00
+     console.log(window.birthday);
+     console.log(moment().format()); -->
